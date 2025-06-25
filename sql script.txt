@@ -1,0 +1,26 @@
+-- Create a sample table
+CREATE TABLE customers (
+    id INTEGER PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
+    email TEXT,
+    city TEXT 
+);
+
+-- INSERT statements
+INSERT INTO customers (id, name, email, city) VALUES (101,'Jyothsna', 'jyothsna@gmail.com', 'Satyavedu');
+INSERT INTO customers (id, name, email, city) VALUES (102,'Sai', 'sai@gmail.com', Null); -- Handling NULL
+INSERT INTO customers (id, name, email) VALUES (103, 'Umesh', 'umesh@gmail.com','vizag');
+INSERT INTO customers (id, name, email, city) VALUES (104 'latha', 'latha@gmail.com', 'Tirupati'); 
+INSERT INTO customers (id, name, email, city) VALUES (105 'Murali', 'murali@gmail.com', 'Bangalore'); 
+
+
+-- UPDATE statements
+update customers set phone='0001112222' where id = 101;
+update customers set email= Null where id = 102;
+
+
+-- DELETE statement
+DELETE FROM customers WHERE name = 'umesh';
+
+-- Check result
+SELECT * FROM customers;
